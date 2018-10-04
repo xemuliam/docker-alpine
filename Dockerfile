@@ -1,7 +1,7 @@
-FROM       alpine:3.7
+FROM       alpine:3.8
 MAINTAINER Viacheslav Kalashnikov <xemuliam@gmail.com>
 ARG        GLIBC_MIRROR=https://github.com/sgerrand/alpine-pkg-glibc
-ARG        GLIBC_VERSION=2.26-r0
+ARG        GLIBC_VERSION=2.28-r0
 ENV        LANG=C.UTF-8
 RUN        apk add --no-cache --virtual=.build-deps curl && \
            curl -Lo /etc/apk/keys/sgerrand.rsa.pub "https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub" && \
