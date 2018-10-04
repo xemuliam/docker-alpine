@@ -8,7 +8,7 @@ RUN        apk add --no-cache --virtual=.build-deps curl && \
            curl -Lo /glibc.apk "${GLIBC_MIRROR}/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk" && \
            curl -Lo /glibc-bin.apk "${GLIBC_MIRROR}/releases/download/${GLIBC_VERSION}/glibc-bin-${GLIBC_VERSION}.apk" && \
            curl -Lo /glibc-i18n.apk "${GLIBC_MIRROR}/releases/download/${GLIBC_VERSION}/glibc-i18n-${GLIBC_VERSION}.apk" && \
-           apk add --no-cache \
+           apk add --no-cache --allow-untrusted \
              /glibc.apk \
              /glibc-bin.apk \
              /glibc-i18n.apk && \
